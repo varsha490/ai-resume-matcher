@@ -1,0 +1,128 @@
+/* -------- Global -------- */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 30px;
+  min-height: 100vh;
+}
+
+/* -------- Headings -------- */
+h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* -------- Main Card -------- */
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  max-width: 850px;
+  margin: auto;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* -------- Inputs -------- */
+select,
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+/* -------- Buttons -------- */
+button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ffffff;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* -------- Dashboard -------- */
+#dashboard {
+  background: #ffffff;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 16px;
+  max-width: 850px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* -------- Score & Labels -------- */
+#ats {
+  font-size: 40px;
+  font-weight: bold;
+  color: #667eea;
+}
+
+#fit {
+  font-size: 18px;
+  font-weight: bold;
+  color: #10b981;
+}
+
+/* -------- Skill Tags -------- */
+#matched span,
+#missing span {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin: 5px 5px 0 0;
+}
+
+#matched span {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+#missing span {
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+/* -------- Lists -------- */
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin: 6px 0;
+  color: #374151;
+}
+
+/* -------- Hidden -------- */
+.hidden {
+  display: none;
+}
+
+/* -------- Footer Button -------- */
+#dashboard button {
+  display: block;
+  margin: 25px auto 0;
+}

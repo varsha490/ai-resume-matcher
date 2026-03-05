@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Resume Analyzer</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>AI Resume Analyzer & Matcher</h1>
+
+<div class="card">
+  <select id="roleSelect" name="role">
+    <option value="">Select Role</option>
+    <option>Software Engineer</option>
+    <option>AI Engineer</option>
+    <option>Data Analyst</option>
+    <option>Financial Analyst</option>
+    <option>Accounts Executive</option>
+    <option>Business Analyst</option>
+    <option>Digital Marketing Executive</option>
+    <option>HR Executive</option>
+    <option>Operations Executive</option>
+  </select>
+
+  <button type="button" onclick="generateJD()">Auto Generate JD</button>
+
+  <form id="analyzeForm">
+    <input type="file" name="resume" required>
+
+    <textarea
+      id="jdBox"
+      name="job_description"
+      placeholder="Job Description"
+      required></textarea>
+
+    <button type="submit">Analyze</button>
+  </form>
+</div>
+
+<div id="dashboard" class="hidden">
+  <h3>Domain: <span id="domain"></span></h3>
+  <h3>ATS Score: <span id="ats"></span></h3>
+  <h3>Role Fit: <span id="fit"></span></h3>
+
+  <h4>Matched Skills</h4>
+  <div id="matched"></div>
+
+  <h4>Missing Skills</h4>
+  <div id="missing"></div>
+
+  <!-- ✅ Skill Gap Chart -->
+  <h4>Skill Gap Overview</h4>
+  <canvas id="skillChart" width="400" height="220"></canvas>
+
+  <h4>Interview Tips</h4>
+  <ul id="interview"></ul>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

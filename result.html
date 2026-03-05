@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Match Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">AI Resume Matcher</div>
+  <nav>
+    <a href="/">Home</a>
+  </nav>
+</header>
+
+<section class="result">
+  <h2>ATS Match Rate</h2>
+
+  <div class="circle">
+    <span>{{ score }}%</span>
+  </div>
+
+  <h3>Matched Skills</h3>
+  {% if skills %}
+    <ul>
+      {% for s in skills %}
+        <li>{{ s }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No matched skills found.</p>
+  {% endif %}
+
+  <h3>Missing Skills (ATS Recommendation)</h3>
+  {% if score == 0 %}
+    <p>No relevant job skills detected in resume or job description.</p>
+  {% elif missing %}
+    <ul>
+      {% for m in missing %}
+        <li>{{ m }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Your resume matches all required skills 🎉</p>
+  {% endif %}
+
+  <a href="/" class="btn">Scan Another Resume</a>
+</section>
+
+</body>
+</html>
